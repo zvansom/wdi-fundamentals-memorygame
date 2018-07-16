@@ -27,7 +27,7 @@ var flipCard = function() {
   console.log("User flipped " + cards[cardId].rank);
   cardsInPlay.push(cards[cardId]);
   this.setAttribute('src', cards[cardId].cardImage);
-  checkForMatch(cardsInPlay[0], cardsInPlay[1])
+  checkForMatch(cardsInPlay[0], cardsInPlay[1]);
 }
 
 var checkForMatch = function(card1, card2) {
@@ -43,8 +43,8 @@ var checkForMatch = function(card1, card2) {
 var createBoard = function() {
   for (var i = 0; i < cards.length; i++) {
     var cardElement = document.createElement('img');
-    cardElement.setAttribute('src', 'images/back.png')
-    cardElement.setAttribute('data-id', i)
+    cardElement.setAttribute('src', 'images/back.png');
+    cardElement.setAttribute('data-id', i);
     cardElement.addEventListener('click', flipCard);
     document.getElementById('game-board').appendChild(cardElement);
   }
